@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betigest - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Modal for CV Download -->
+    <div class="modal" id="cvModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Download CV</h3>
+            <p class="modal-text">Thank you for your interest! Your download will begin shortly.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn btn-cancel" id="cancelCv">Cancel</button>
+                <button class="modal-btn btn-confirm" id="confirmCv">Download</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Hire Me -->
+    <div class="modal" id="hireModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Hire Me</h3>
+            <p class="modal-text">Thank you for your interest in working with me! I'll get back to you soon.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn btn-cancel" id="cancelHire">Cancel</button>
+                <button class="modal-btn btn-confirm" id="confirmHire">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" data-header>
+        <div class="container">
+            <h1 class="h1 logo">
+                <a href="#">betigest<span>.</span></a>
+            </h1>
+
+            <div class="navbar-actions">
+                <select name="language" id="lang">
+                    <option value="en">En</option>
+                    <option value="es">Am</option>
+                </select>
+
+                <button
+                    class="theme-btn"
+                    aria-label="Change Theme"
+                    title="Change Theme"
+                    data-theme-btn
+                >
+                    <span class="icon"></span>
+                </button>
+            </div>
+
+            <button
+                class="nav-toggle-btn"
+                aria-label="Toggle Menu"
+                title="Toggle Menu"
+                data-nav-toggle-btn
+            >
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="#home" class="navbar-link">Home</a></li>
+                    <li><a href="#about" class="navbar-link">About</a></li>
+                    <li><a href="#skills" class="navbar-link">Skills</a></li>
+                    <li><a href="#portfolio" class="navbar-link">Hobby</a></li>
+                    <li><a href="#projects" class="navbar-link">Projects</a></li>
+                    <li><a href="#contact" class="navbar-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+            <section class="hero" id="home">
+                <figure class="hero-banner">
+                    <picture>
+                        <source srcset="bita 1.jpg" media="(min-width: 768px)" />
+                        <source srcset="bita 1.jpg" media="(min-width: 500px)" />
+                        <img src="bita 1.jpg" alt="A man with blue shirt" class="w-100" />
+                    </picture>
+                </figure>
+
+                <div class="hero-content">
+                    <h2 class="h2 hero-title">
+                        I'm Betigest Shaleselase,<span> Web Developer</span>
+                        
+                    </h2>
+                    <a href="#contact" class="btn btn-primary">Contact us</a>
+                </div>
+
+                <ul class="hero-social-list">
+                    <li>
+                        <a href="https://instagram.com/bitalu249" class="hero-social-link">
+                            <i class="ri-instagram-fill"></i>
+                            <div class="tooltip">instagram</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://t.me/ye_sahsla03" class="hero-social-link">
+                            <i class="ri-telegram-fill"></i>
+                            <div class="tooltip">telegram</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#stats" class="scroll-down">Scroll</a>
+            </section>
+
+            <section class="stats" id="stats">
+                <ul class="stats-list">
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img
+                                    src="https://i.postimg.cc/x1TWtf69/stats-card-icon-1.png"
+                                    alt="badge icon"
+                                />
+                            </div>
+
+                            <h2 class="h2 card-title">
+                                3+<strong>Years of Experience</strong>
+                            </h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img
+                                    src="https://i.postimg.cc/q7ByNYBb/stats-card-icon-2.png"
+                                    alt="checkmark icon"
+                                />
+                            </div>
+
+                            <h2 class="h2 card-title">
+                                3+<strong>Completed Projects</strong>
+                            </h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img
+                                    src="https://i.postimg.cc/hj6d3tL6/stats-card-icon-3.png"
+                                    alt="peoples rating icon"
+                                />
+                            </div>
+
+                            <h2 class="h2 card-title">10+<strong>Happy Clients</strong></h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="about" id="about">
+                <figure class="about-banner">
+                    <img src="bitu.jpg" alt="A man thinking" class="w-100" />
+                </figure>
+
+                <div class="about-content section-content">
+                    <p class="section-subtitle">About me</p>
+                    <h2 class="h2 section-title">Information Science Student</h2>
+                    <p class="section-text">
+                        I'm a passionate 3rd-year Information Science student at the University of Gondar,
+                        where I'm learning to bridge the gap between complex information systems and user-friendly 
+                        digital experiences. My studies in information architecture, data management, and human-computer
+                         interaction inform my approach to building clean, intuitive web applications that effectively
+                          organize and present information. I'm dedicated to creating technology solutions that 
+                          not only function flawlessly but also enhance how people access and interact with digital 
+                          information in meaningful ways.
+                    </p>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-secondary" id="hireMeBtn">Hire me</button>
+                    <button class="btn btn-primary" id="downloadCvBtn">Download CV</button>
+                </div>
+            </section>
+
+            <section class="skills" id="skills">
+                <div class="skills-content section-content">
+                    <p class="section-subtitle">My Skills</p>
+                    <h2 class="h2 section-title">
+                        What my Programming Skills Includes?
+                    </h2>
+                    <p class="section-text">
+                        I develop simple, intuitive and responsive user interface that
+                        helps user get things done with less effort and time with those
+                        technologies
+                    </p>
+
+                    <div class="skills-toggle" data-toggle-box>
+                        <button class="toggle-btn active" data-toggle-btn>Skills</button>
+                        <button class="toggle-btn" data-toggle-btn>Tools</button>
+                    </div>
+                </div>
+
+                <div class="skills-box" data-skills-box>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">HTML5</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/90cYBMc2/html5.png"
+                                        alt="HTML5 logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">CSS3</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/cCDwMBD7/css3.png"
+                                        alt="CSS3 logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Javascript</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/htmQfnq1/javascript.png"
+                                        alt="Javascript logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="tools-list">
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Git</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/Gp5FZCv0/git.png"
+                                        alt="Git logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Command Line</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/VNrr0b0T/command.png"
+                                        alt="Command Line logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">VS Code</div>
+                                <div class="card-icon">
+                                    <img
+                                        src="https://i.postimg.cc/zvXqW9PB/vs-code.png"
+                                        alt="VS Code logo"
+                                    />
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section with Buttons -->
+            <section class="projects-section" id="projects">
+                <div class="section-content">
+                    <p class="section-subtitle">My Projects</p>
+                    <h2 class="h2 section-title">Featured Work</h2>
+                    <p class="section-text">
+                        Here are some of my recent projects that showcase my skills in web development and design.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Portfolio Website" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Personal Portfolio</h3>
+                            <p class="project-description">A responsive portfolio website showcasing my skills, projects, and contact information.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="E-commerce Dashboard" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">E-commerce Dashboard</h3>
+                            <p class="project-description">A comprehensive dashboard for managing products, orders, and customer data for an online store.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Task Management App" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">A productivity application for creating, organizing, and tracking tasks with drag-and-drop functionality.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="portfolio">
+                <ul class="project-list">
+                    <li>
+                        <div class="project-content section-content">
+                            <p class="section-subtitle">My Hobby</p>
+                            <h2 class="h3 section-title">
+                                I'm enjoying fashion photography
+                            </h2>
+                            <p class="section-text">
+                                I'm enjoying fashion photography, capturing the essence of style and personality through my lens. Each shot tells a unique story of elegance and expression.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="project-card">
+                            <figure class="card-banner">
+                                <img
+                                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                                    alt="Fashion model in urban setting"
+                                    width="500"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Urban Elegance</h3>
+                                <time class="publish-date" datetime="2025-03"
+                                    >March 2025</time
+                                >
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="project-card">
+                            <figure class="card-banner">
+                                <img
+                                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                                    alt="Fashion model in boutique"
+                                    width="500"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Boutique Style</h3>
+                                <time class="publish-date" datetime="2025-02"
+                                    >February 2025</time
+                                >
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="project-card">
+                            <figure class="card-banner">
+                                <img
+                                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                                    alt="Fashion portrait with natural light"
+                                    width="500"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Natural Glow</h3>
+                                <time class="publish-date" datetime="2025-02"
+                                    >February 2025</time
+                                >
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="project-card">
+                            <figure class="card-banner">
+                                <img
+                                    src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                                    alt="Street fashion photography"
+                                    width="500"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Street Vogue</h3>
+                                <time class="publish-date" datetime="2025-01"
+                                    >January 2025</time
+                                >
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="project-card">
+                            <figure class="card-banner">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                                    alt="Fashion model in studio"
+                                    width="500"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Studio Chic</h3>
+                                <time class="publish-date" datetime="2025-01"
+                                    >January 2025</time
+                                >
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <button class="load-more" id="loadMorePhotos">Load More Photos</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="contact-content section-content">
+                    <p class="section-subtitle">Contact</p>
+                    <h2 class="h3 section-title">
+                        Have you any project? Drop a message!
+                    </h2>
+                    <p class="section-text">
+                        Get in touch and let me know if I can help! Fill out the form and
+                        I'll be in touch as soon as possible
+                    </p>
+
+                    <ul class="contact-list">
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Address:</h3>
+                                <address class="contact-info">
+                                    Gonder, Ethiopia
+                                </address>
+                            </div>
+                        </li>
+
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Phone:</h3>
+
+                                <a href="#contact" class="contact-info">+251 905957707</a>
+                            </div>
+                        </li>
+
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Email:</h3>
+
+                                <a href="mailto:Bitasahle88@gmail.com" class="contact-info"
+                                    >Bitasahle88@gmail.com</a
+                                >
+                            </div>
+                        </li>
+
+                        <li>
+                            <ul class="contact-social-list">
+                                <li>
+                                    <a href="https://instagram.com/bitalu249" class="contact-social-link">
+                                        <div class="tooltip">instagram</div>
+                                        <i class="ri-instagram-fill"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://t.me/ye_sahsla03" class="contact-social-link">
+                                        <div class="tooltip">telegram</div>
+                                        <i class="ri-telegram-fill"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="" class="contact-form" id="contactForm">
+                    <div class="form-wrapper">
+                        <label for="name" class="form-label">Name</label>
+
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                required
+                                placeholder="betigest shaleselase"
+                                class="input-field"
+                            />
+                            <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="email" class="form-label">Email</label>
+
+                        <div class="input-wrapper">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                                placeholder="Bitasahle88@gmail.com"
+                                class="input-field"
+                            />
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="phone" class="form-label">Phone</label>
+
+                        <div class="input-wrapper">
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                required
+                                placeholder="Phone Number"
+                                class="input-field"
+                            />
+                            <ion-icon name="call"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="message" class="form-label">Message</label>
+
+                        <div class="input-wrapper">
+                            <textarea
+                                name="message"
+                                id="message"
+                                class="input-field"
+                                required
+                                placeholder="Write your Message"
+                            ></textarea>
+                            <ion-icon name="chatbubbles"></ion-icon>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="h1 logo">
+                <a href="#">betigest<span>.</span></a>
+            </p>
+
+            <p class="copyright">
+                &copy; 2025
+                <a href="#" target="_blank"
+                    >betigest shaleselase</a
+                >. All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <a href="#top" class="go-top" data-go-top title="Go to Top"
+        ><ion-icon name="arrow-up"></ion-icon
+    ></a>
+
+    <script src="main.js"></script>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</body>
+</html>
