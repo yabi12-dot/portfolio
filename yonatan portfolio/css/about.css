@@ -1,0 +1,147 @@
+/* about.css */
+
+/* ABOUT HERO */
+.about-hero {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 85vh;
+  margin-top: 0;
+}
+.about-hero__image {
+  position: relative; overflow: hidden;
+}
+.about-hero__image img {
+  height: 100%; object-fit: cover;
+  filter: sepia(20%) contrast(1.08);
+}
+.about-hero__image-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, transparent 60%, var(--black) 100%);
+}
+.about-hero__text {
+  background: var(--black);
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 8rem 4rem 4rem;
+}
+.about-hero__title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: var(--cream); line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.about-hero__title em {
+  font-style: italic;
+  color: var(--terracotta);
+}
+.about-hero__role {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  letter-spacing: 0.1em; color: rgba(242,234,216,0.6);
+  line-height: 1.8; margin-bottom: 0.75rem;
+}
+.about-hero__location {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.2em; color: var(--terracotta);
+}
+
+/* ABOUT INTRO */
+.about-intro {
+  padding: 5rem 3rem;
+  background: var(--brown-deep);
+  border-top: 1px solid rgba(193,103,58,0.2);
+}
+.about-intro__inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; max-width: 1200px; margin: 0 auto;
+}
+.about-intro__large {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  color: var(--cream); line-height: 1.6;
+}
+.about-intro__body p {
+  font-size: 0.95rem;
+  color: rgba(242,234,216,0.7);
+  line-height: 1.9; margin-bottom: 1.25rem;
+}
+.about-intro__body em { color: var(--gold-muted); font-style: italic; }
+
+/* Q&A */
+.about-qa {
+  padding: 5rem 3rem;
+  background: var(--black);
+}
+.about-qa__inner { max-width: 900px; margin: 0 auto; }
+.qa-list { display: flex; flex-direction: column; gap: 0; }
+.qa-item {
+  border-top: 1px solid rgba(193,103,58,0.2);
+  padding: 2.5rem 0;
+}
+.qa-item:last-child { border-bottom: 1px solid rgba(193,103,58,0.2); }
+.qa-question {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--terracotta);
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+.qa-question::after {
+  content: '+';
+  position: absolute; right: 0; top: 0;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--terracotta);
+  transition: transform var(--transition);
+}
+.qa-item.open .qa-question::after { transform: rotate(45deg); }
+.qa-answer p {
+  font-size: 0.95rem;
+  color: rgba(242,234,216,0.7);
+  line-height: 1.9; margin-bottom: 1rem;
+}
+.qa-answer { overflow: hidden; }
+
+/* INFLUENCES */
+.about-influences {
+  padding: 5rem 3rem;
+  background: var(--brown-deep);
+}
+.about-influences__inner { max-width: 1100px; margin: 0 auto; }
+.influences-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.influence-card {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(193,103,58,0.2);
+  transition: border-color var(--transition), background var(--transition);
+}
+.influence-card:hover {
+  border-color: var(--terracotta);
+  background: rgba(193,103,58,0.05);
+}
+.influence-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem; color: var(--cream);
+  display: block; margin-bottom: 1rem;
+}
+.influence-note {
+  font-size: 0.88rem;
+  color: rgba(242,234,216,0.6);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .about-intro__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .influences-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .about-hero { grid-template-columns: 1fr; min-height: auto; }
+  .about-hero__image { height: 50vh; }
+  .about-hero__image-overlay { background: linear-gradient(to bottom, transparent 50%, var(--black) 100%); }
+  .about-hero__text { padding: 3rem 1.5rem; }
+  .about-intro { padding: 3rem 1.5rem; }
+  .about-qa { padding: 3rem 1.5rem; }
+  .about-influences { padding: 3rem 1.5rem; }
+  .influences-grid { grid-template-columns: 1fr; }
+}

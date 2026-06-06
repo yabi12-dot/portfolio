@@ -1,0 +1,43 @@
+/* placeholders.css  graceful image placeholders until real photos are added */
+
+/* Every image slot that hasn't loaded shows a warm gradient with a camera icon */
+.hero__img,
+.series__card-img,
+.split-statement__image img,
+.about-hero__image img,
+.photo-item__wrap img,
+.journal-entry__img-wrap img {
+ background: linear-gradient(135deg, #3B1F0E 0%, #2A1A0E 50%, #1C1108 100%);
+ min-height: 100%;
+}
+
+/* Decorative frame lines on photo slots without loaded images */
+.photo-item__wrap::before {
+ content: '';
+ position: absolute;
+ inset: 12px;
+ border: 1px solid rgba(193,103,58,0.2);
+ z-index: 1;
+ pointer-events: none;
+}
+
+/* Hero fallback: show a rich terracotta gradient */
+.hero__bg {
+ background: linear-gradient(160deg, #1C1108 0%, #3B1F0E 40%, #2A1A0E 100%);
+}
+
+/* Series card fallback numbers */
+.series__card-img-wrap {
+ background: linear-gradient(135deg, #3B1F0E 0%, #2A1A0E 100%);
+ position: relative;
+}
+
+/* About hero fallback */
+.about-hero__image {
+ background: linear-gradient(135deg, #2A1A0E 0%, #1C1108 100%);
+}
+
+/* Journal sidebar image fallback */
+.journal-entry__img-wrap {
+ background: linear-gradient(135deg, #3B1F0E 0%, #2A1A0E 100%);
+}
